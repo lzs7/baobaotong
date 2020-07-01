@@ -149,7 +149,7 @@ a {
 .d_title div {
   font-weight: 500;
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 35%;
   text-align: center;
   color: #fff;
   margin-left: 0.16rem;
@@ -171,7 +171,8 @@ a {
   display: flex;
 }
 .c_data div {
-  margin-left: 1.8rem;
+  width:25%;
+  text-align: center;
   font-size: 0.8125rem;
 }
 .c_data div:last-child {

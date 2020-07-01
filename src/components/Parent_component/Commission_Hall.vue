@@ -61,7 +61,7 @@
                 <div>¥{{item.entrustMoney}}</div>
                 <div>{{item.insuranceCompanyName}}</div>
                 <div>{{item.entrustAddress.split('/')[1]}}</div>
-                <div>{{item.entrustServiceCharge!=''?item.entrustServiceCharge:"电话沟通"}}</div>
+                <div>{{item.entrustServiceCharge!=null?item.entrustServiceCharge:"电话沟通"}}</div>
               </div>
               <div class="db_operation">
                 <div>
@@ -353,7 +353,7 @@ a {
 .db_title div {
   font-weight: 500;
   font-size: 0.875rem;
-  width: 7.125rem;
+  width:25%;
   text-align: center;
 }
 .db_data {
@@ -362,7 +362,7 @@ a {
 }
 .db_data div {
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 25%;
   text-align: center;
   color: #999999;
 }
@@ -380,16 +380,20 @@ a {
   padding-top: 0.9375rem;
   margin-left: 0.9375rem;
   font-size: 0.8125rem;
+  width:24%;
+  text-align: center;
 }
+
 .db_operation div p:nth-child(2) {
   margin-top: 0.625rem;
 }
 .db_operation div:nth-child(2) {
-  width: 6.25rem;
+  width:20%；
 }
 .db_operation div:last-child {
   margin-left: 0.1rem;
   display: flex;
+  width:42%
 }
 .datign {
   margin-left: 0.4rem;
@@ -410,7 +414,7 @@ a {
   transition: opacity 0.2s;
   -webkit-appearance: none;
   width: 4.5rem !important;
-  margin-left: 0.3rem !important;
+  margin-left: 13% !important;
 }
 .chexiao {
   color: #323233 !important;

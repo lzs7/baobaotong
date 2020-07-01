@@ -127,7 +127,7 @@ export default {
 .p_customers div {
   font-weight: 500;
   font-size: 0.8125rem;
-  width: 7.125rem;
+  width:25%;
   text-align: center;
   color: #fff;
   margin-left: 0.16rem;
@@ -142,7 +142,7 @@ export default {
 }
 .customers div {
   font-size: 0.75rem;
-  width: 7.125rem;
+  width: 25%;
   color: #999999;
   text-align: center;
 }

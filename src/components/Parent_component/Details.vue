@@ -25,7 +25,7 @@
         <div>{{item.deliveryOrderNumber}}</div>
         <div>¥{{item.deliveryOrderMoney}}</div>
         <div class="ss">{{item.deliveryOrderState==0?"待处理":item.deliveryOrderState==1?"已完成":"已驳回"}}</div>
-        <div v-if="item.deliveryOrderState===0" class="bttn">
+        <div v-show="item.deliveryOrderState==0" class="bttn">
           <van-button
             type="primary"
             size="mini"
@@ -34,6 +34,7 @@
           >确认接单</van-button>
           <van-button type="primary" size="mini" color="#0066ff" @click="bohui(item)">无效驳回</van-button>
         </div>
+        <div v-show="item.deliveryOrderState>0" class="bttn"></div>
       </div>
       <!-- *** -->
       <!-- <div class="b_data">
@@ -258,7 +259,7 @@ a {
 .d_title div {
   font-weight: 500;
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 33%;
   text-align: center;
   color: #fff;
   margin-left: 0.16rem;
@@ -272,11 +273,11 @@ a {
 }
 .b_title div {
   font-size: 0.875rem;
-  width: 5rem;
+  width: 22%;
   text-align: center;
 }
 .b_title div:last-child {
-  width: 7.25rem;
+  width: 31%;
   font-size: 0.875rem;
   text-align: center;
 }
@@ -294,20 +295,20 @@ a {
   border-bottom: 0.0625rem solid #e8e8e8;
 }
 .b_data div {
-  width: 5rem;
+  width: 27%;
   text-align: center;
   color: #999999;
   font-size: 0.8125rem;
 }
 .b_data .ss {
-  width: 5rem;
+  width: 26%;
   text-align: center;
   margin-left: 0.3125rem;
   color: #999999;
   font-size: 0.8125rem;
 }
 .b_data .bttn {
-  width: 8.25rem;
+  width: 43%;
   color: #999999;
   font-size: 0.8125rem;
   text-align: center;

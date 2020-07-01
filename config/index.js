@@ -13,7 +13,7 @@ module.exports = {
         proxyTable: {
             '/api': { //使用"/api"来代替
                 target: 'http://localhost:8888', //接口域名 
-                // target: 'http://www.dwhlzchb.com:8080/bbt/', 
+                // target: 'http://www.dwhlzchb.com:8080/bbt/',
                 changeOrigin: true, //改变源 
                 pathRewrite: {
                     '^/api': '' //路径重写 

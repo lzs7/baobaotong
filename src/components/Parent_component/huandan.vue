@@ -20,14 +20,14 @@
           <div>保费金额</div>
           <div>应还金额</div>
           <div>委托状态</div>
-          <div>等待时长</div>
+          <!-- <div>等待时长</div> -->
           <div>操作</div>
         </div>
         <div class="xq_display">
           <div>¥{{list.entrustMoney}}</div>
           <div>¥{{list.entrustReturnMoney}}</div>
           <div>{{list.entrustState==1?"进行中":list.entrustState==2?"待确认完成":"已完成"}}</div>
-          <div>3分钟</div>
+          <!-- <div>3分钟</div> -->
           <div class="btnn" @click="queren(list.entrustId)" v-show="list.entrustState==1">确认完成</div>
           <div class="btnn" v-show="list.entrustState==2">待确认</div>
         </div>
@@ -249,7 +249,7 @@ a {
 .xq_title div {
   font-weight: 500;
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 35%;
   text-align: center;
   color: #fff;
   margin-left: 0.16rem;
@@ -267,7 +267,7 @@ a {
 }
 .xq_list div {
   font-size: 0.875rem;
-  width: 5rem;
+  width:25%;
   text-align: center;
 }
 .xq_display {
@@ -280,7 +280,7 @@ a {
 }
 .xq_display div {
   font-size: 0.75rem;
-  width: 5rem;
+  width: 25%;
   color: #999999;
   text-align: center;
 }
@@ -305,7 +305,7 @@ a {
   margin: 0 auto;
 }
 .hd div {
-  width: 8.25rem;
+  width: 34%;
 }
 
 .tc {

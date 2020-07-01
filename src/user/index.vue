@@ -93,13 +93,9 @@
         <div style="margin-top:0.4rem">
           <van-collapse v-model="activeNames">
             <van-collapse-item title="消息" name="2" icon="volume-o" :value="number+'条消息'">
-              <!-- <div v-show="count==0">没有消息</div>
-              <div class="xinxi" v-show="count>0" v-for="(item,index) in friend" :key="index">
-                <div>{{item.friendName}}</div>
-                <div>{{item.friendCompanyName}}</div>
-                <div>{{item.friendPhone}}</div>
-              </div>-->
-              <div style="width:100%">
+              <div v-show="number==0">没有消息</div>
+
+              <div style="width:100%" v-show="number>0">
                 <div class="xx_title">
                   <div>车牌号码</div>
                   <div>消息内容</div>
@@ -162,6 +158,7 @@ export default {
           // on cancel
         });
     },
+    //点击豪车汇
     haoche() {
       var cookie1 = this.common.getCookie();
       var baoId = cookie1.replace(/\"/g, "").split("#")[1];
@@ -211,29 +208,28 @@ export default {
           }
         })
         .then(res => {
-           if(res.data.code==200){
-          
-                this.reload();
-             
-        }
+          if (res.data.code == 200) {
+            this.reload();
+          }
         })
         .catch(err => {
           console.log(err);
         });
     },
-    delet(id) {
+    delet(id) {//删除消息
       let newsId = id.newsId;
       let userId = this.userId;
-      this.getData.read({
-        params: {
-          newsId: newsId,
-          userId: userId,
-          index: 2
-        }
-      })
-      .then(res=>{
-        if(res.data.code==200){
-          this.$dialog
+      this.getData
+        .read({
+          params: {
+            newsId: newsId,
+            userId: userId,
+            index: 2
+          }
+        })
+        .then(res => {
+          if (res.data.code == 200) {
+            this.$dialog
               .alert({
                 title: "提示",
                 message: "删除成功"
@@ -241,9 +237,9 @@ export default {
               .then(() => {
                 this.reload();
               });
-        }
-      })
-      .catch(err=>{})
+          }
+        })
+        .catch(err => {});
     }
     // onClickLeft() {
     // 	history.back();
@@ -261,7 +257,6 @@ export default {
       })
       .then(res => {
         this.userdata = res.data.data;
-        console.log(this.userdata);
       })
       .catch(err => {
         console.log(err);
@@ -285,6 +280,7 @@ export default {
       });
   },
   created() {
+    //查询消息
     var cookie1 = this.common.getCookie();
     let userId = cookie1.replace(/\"/g, "").split("#")[0];
     this.getData
@@ -294,7 +290,6 @@ export default {
         }
       })
       .then(res => {
-        console.log(res.data.data);
         this.list = res.data.data;
         this.number = res.data.count;
       })
