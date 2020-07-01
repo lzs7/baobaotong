@@ -151,7 +151,7 @@ export default {
 .H_title div {
   font-weight: 500;
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 25%;
   height: 2.3rem;
   line-height: 2.3rem;
   text-align: center;
@@ -198,7 +198,7 @@ export default {
 }
 .H_data div {
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 25%;
   text-align: center;
   color: #999999;
   background-color: #ffffff;
@@ -225,7 +225,7 @@ export default {
 }
 .order_title div {
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 25%;
   text-align: center;
 }
 .order_data {
@@ -239,7 +239,7 @@ export default {
 }
 .order_data div {
   font-size: 0.875rem;
-  width: 7.125rem;
+  width: 25%;
   text-align: center;
   color: #666666;
 }

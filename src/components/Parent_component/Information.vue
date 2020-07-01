@@ -23,7 +23,7 @@
       <van-cell title="服务积分" value="0" />-->
       <button @click="eidt">编辑资料</button>
     </div>
-    <van-popup v-model="show" :style="{ height: '94%',width:'93%' }" closeable>
+    <van-popup v-model="show" :style="{ height: '70%',width:'93%' }" closeable>
       <div class="xiugai">
         <van-form @submit="onSubmit">
           <van-field

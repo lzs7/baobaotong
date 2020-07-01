@@ -8,6 +8,8 @@ import common from './utils/common'
 // import VueJsonp from 'vue-jsonp'
 
 
+// import 'amfe-flexible';
+
 import 'babel-polyfill'
 
 

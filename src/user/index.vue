@@ -2,11 +2,12 @@
   <div class="page">
     <!-- 导航栏 -->
     <div class="Navigation">
-      <div class="ri">
-        <div class="Return-img" @click="tuichu">
+      <div class="ri" @click="tuichu">
+        <div class="Return-img" >
           <img src="../assets/img/gb.png" alt />
         </div>
         <div class="tui">退出登录</div>
+        
       </div>
       <div class="img-right">
         <img src="../assets/img/elipsis1.png" alt />
@@ -257,6 +258,7 @@ export default {
       })
       .then(res => {
         this.userdata = res.data.data;
+
       })
       .catch(err => {
         console.log(err);
@@ -368,7 +370,7 @@ a {
   position: absolute;
   top: 16%;
   left: 33%;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #ffffff;
 }
 .Real-name {
@@ -377,7 +379,7 @@ a {
   left: 33%;
   color: #ffffff;
   border-radius: 1.25rem;
-  border: 1px solid #ffffff;
+  border: 0.0625rem solid #ffffff;
   font-size: 0.625rem;
   text-align: center;
   width: 4rem;

@@ -104,8 +104,4 @@ export default {
   width: 96%;
   margin: 0 auto;
 }
-.van-button__content {
-  width: 100% !important;
-  color: #fff !important;
-}
 </style>

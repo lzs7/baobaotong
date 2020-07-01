@@ -11,7 +11,7 @@
     <div style="height:2.4rem;"></div>
     <!-- 标题 -->
     <div class="xq_title">
-      <div>{{list.licensePlateNumber}}</div>
+      <div v-if="list.licensePlateNumber">{{list.licensePlateNumber.substring(0,4)}}***</div>
       <div>{{list.entrustBusiness==1?"投保商业车损险":"不投商业车损险"}}</div>
       <div>{{list.userPhone}}</div>
     </div>

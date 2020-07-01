@@ -210,7 +210,7 @@ text {
   margin-right: 0.16rem;
   width: 100% !important;
   color: #fff !important;
-  font-size: 0.2rem !important;
+  font-size: 1rem !important;
 }
 .van-button {
   background-color: rgb(15, 112, 224);
