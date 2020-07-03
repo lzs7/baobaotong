@@ -7,8 +7,8 @@ import Vue from "vue";
  *
  *
  */
-axios.defaults.baseURL = "http://www.dwhlzchb.com:8080/bbt/";
-// axios.defaults.baseURL = "http://localhost:8888"; //接口路径
+// axios.defaults.baseURL = "http://www.dwhlzchb.com:8080/bbt/";
+axios.defaults.baseURL = "http://localhost:8888"; //接口路径
 axios.defaults.withCredentials = true; //设置发起请求的‘凭据模式’为‘include’，
 axios.interceptors.request.use(config => {
     // Vue.$store.commit("showLoading")

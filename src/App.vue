@@ -26,6 +26,12 @@ export default {
        })
     }
   },
+  created(){//刷新页面显示加载中
+    let loading=document.getElementById('Loading')
+    if(loading!=null){
+      document.body.removeChild(loading);
+    }
+  }
 }
 </script>
 

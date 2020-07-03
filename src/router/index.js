@@ -14,7 +14,7 @@ const routes = [{
 
         meta: { requireAuth: true },
         component: () =>
-            import ( /* webpackChunkName: "about" */ '../user/index.vue')
+            import ('../user/index.vue')
     },
     //添加客户
     {

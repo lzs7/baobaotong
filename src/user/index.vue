@@ -103,12 +103,12 @@
                   <div>操作</div>
                 </div>
                 <div class="xx_neirong" v-for="(item,index) in list" :key="index">
-                  <div>{{item.newsLicenseNumber}}</div>
-                  <div>{{item.newsMessage}}</div>
+                  <div style="font-size:0.8rem">{{item.newsLicenseNumber}}</div>
+                  <div style="font-size:0.8rem">{{item.newsMessage}}</div>
                   <div style="display:flex;">
                     <button class="du" @click="weidu(item)" v-show="item.newsState==0">未读</button>
                     <button class="yi" v-show="item.newsState==1">已读</button>
-                    <button @click="delet(item)">删除</button>
+                    <button @click="delet(item)" class="delet">删除</button>
                   </div>
                 </div>
               </div>
@@ -524,7 +524,6 @@ a {
 .xx_neirong div {
   width: 35%;
   text-align: center;
-  font-size: 0.3rem;
 }
 .xx_neirong div:last-child {
   width: 35%;
@@ -545,12 +544,20 @@ a {
   background-color: #00dd00;
   color: #ffffff;
   border: none;
+  font-size: 0.8rem;
 }
 .xx_neirong .yi {
   background-color: #ffffff;
   color: #dcdcdc;
   border: 0.01rem solid #dcdcdc;
   margin-left: 10%;
+  font-size: 0.8rem;
+}
+.xx_neirong .delet{
+    background-color: #ff3333;
+  color: #ffffff;
+  border: none;
+  font-size: 0.8rem;
 }
 </style>
 
