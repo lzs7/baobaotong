@@ -11,14 +11,16 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            '/api': { //使用"/api"来代替
-                target: 'http://localhost:8888', //接口域名 
-                // target: 'http://www.dwhlzchb.com:8080/bbt/',
-                changeOrigin: true, //跨域
-                pathRewrite: {
-                    '^/api': '' //路径重写 
-                }
-            },
+            proxy: {
+                '/api': { //使用"/api"来代替
+                    target: 'http://localhost:8888', //接口域名 
+                    // target: 'http://www.dwhlzchb.com:8080/bbt/',
+                    changeOrigin: true, //跨域
+                    pathRewrite: {
+                        '^/api': '' //路径重写 
+                    }
+                },
+            }
         },
         // Various Dev Server settings
         host: 'localhost', // can be overwritten by process.env.HOST

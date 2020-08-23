@@ -79,6 +79,15 @@
           <div>客户</div>
         </div>
       </router-link>
+      <router-link to="/Dayend">
+        <div class="list">
+          <div class="icon">
+            <van-icon name="gold-coin-o" />
+          </div>
+          <div>日结</div>
+        </div>
+      </router-link>
+
       <div>
         <!-- <div class="icon"><img src="../assets/haoyou.png" alt=""></div> -->
         <van-collapse v-model="activeNames">

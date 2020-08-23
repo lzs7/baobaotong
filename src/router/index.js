@@ -113,6 +113,13 @@ const routes = [{
         name: '/blank',
         component: () =>
             import ('../components/Parent_component/blank.vue')
+    },
+    //日结
+    {
+        path: '/Dayend',
+        name: '/Dayend',
+        component: () =>
+            import ('../components/Parent_component/Dayend.vue')
     }
 ]
 
