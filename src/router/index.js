@@ -120,6 +120,13 @@ const routes = [{
         name: '/Dayend',
         component: () =>
             import ('../components/Parent_component/Dayend.vue')
+    },
+    //管理员
+    {
+        path: '/admin',
+        name: '/admin',
+        component: () =>
+            import ('../components/Parent_component/admin.vue')
     }
 ]
 
