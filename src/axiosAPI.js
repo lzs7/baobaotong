@@ -243,6 +243,19 @@ export default getData = {
         })
 
     },
+    //postdaily  大家保险提交台账
+    postdaily(postuser) {
+        return axios.post("/user/postuser", JSON.stringify(postuser), { 
+            headers:  {
+
+                       'Content-Type':   'application/json'
+
+                   },
+
+        }).then(res => {
+            return Promise.resolve(res);
+        })
+    },
     //删除客户
     deleteCustomer(params) {
         return axios.get("/client/delectclient", params).then(res => {
@@ -280,6 +293,19 @@ export default getData = {
     //用户消息已读和删除方法
     read(params) {
         return axios.get("/user/delectnews", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
+    //大家保险用户查询对应的台账记录
+    ledgerbook(params) {
+        return axios.get("/djledger/ledgerbook", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
+    //大家保险用户 查询自己的保单信息记录 默认是查询当天的
+    getguarant(params) {
+        console.log("这是" + params)
+        return axios.get("/djledger/getguaranteemessage", params).then(res => {
             return Promise.resolve(res)
         })
     }
