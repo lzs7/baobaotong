@@ -238,6 +238,7 @@ export default {
         console.log(res.data);
         this.data=res.data.data
       });
+     
   },
 };
 </script>

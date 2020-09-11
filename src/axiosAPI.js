@@ -15,7 +15,7 @@ axios.interceptors.request.use(config => {
     return config;
 });
 // post请求头
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 var getData;
 export default getData = {
     // 数据接口==============================================================================
@@ -244,8 +244,8 @@ export default getData = {
 
     },
     //postdaily  大家保险提交台账
-    postdaily(postuser) {
-        return axios.post("/user/postuser", JSON.stringify(postuser), { 
+    postdail(postData) {
+        return axios.post("/djledger/postdaily", JSON.stringify(postData), { 
             headers:  {
 
                        'Content-Type':   'application/json'
@@ -304,11 +304,22 @@ export default getData = {
     },
     //大家保险用户 查询自己的保单信息记录 默认是查询当天的
     getguarant(params) {
-        console.log("这是" + params)
         return axios.get("/djledger/getguaranteemessage", params).then(res => {
             return Promise.resolve(res)
         })
-    }
+    },
+    //getagent  查询所有代理人
+    getagent(params) {
+        return axios.get("/djledger/getagent", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
+    //getdepartment  查询所有部门
+    getdepartment(params) {
+        return axios.get("/djledger/getdepartment", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
     //
     //   // 退出登录
     //   logout() {
