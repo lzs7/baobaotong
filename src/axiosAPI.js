@@ -282,6 +282,19 @@ export default getData = {
         return axios.get("/user/delectnews", params).then(res => {
             return Promise.resolve(res)
         })
+    },
+    //大家保险用户查询对应的台账记录
+    ledgerbook(params) {
+        return axios.get("/djledger/ledgerbook", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
+    //大家保险用户 查询自己的保单信息记录 默认是查询当天的
+    getguarant(params) {
+        console.log("这是" + params)
+        return axios.get("/djledger/getguaranteemessage", params).then(res => {
+            return Promise.resolve(res)
+        })
     }
     //
     //   // 退出登录
