@@ -38,17 +38,6 @@ export default {
   components:{
       genera,
       personal
-  },
-  mounted(){
-     let cookie1 = this.common.getCookie();
-      let userId = cookie1.replace(/\"/g, "").split("#")[0];
-      this.getData.ledgerbook({
-        params:{
-          userId: userId
-        }
-      }).then(res =>{
-        console.log(res.data)
-      })
   }
 };
 </script>
@@ -71,7 +60,11 @@ a {
 .admin_nei {
   width: 98%;
   margin: 0 auto;
+<<<<<<< HEAD
   background: #ffffff15;
+=======
+  background: #ffffff;
+>>>>>>> cd12dae82dbc18f963e985d7e2d5c0154d7e427b
   margin-top:0.3125rem
 }
 </style>

@@ -7,15 +7,15 @@ import Vue from "vue";
  *
  *
  */
-// axios.defaults.baseURL = "http://www.dwhlzchb.com:8080/bbt/";
-axios.defaults.baseURL = "http://localhost:8888"; //接口路径
+axios.defaults.baseURL = "http://bbt.dwhlzchb.com:8080/bbt/";
+// axios.defaults.baseURL = "http://localhost:8888"; //接口路径
 axios.defaults.withCredentials = true; //设置发起请求的‘凭据模式’为‘include’，
 axios.interceptors.request.use(config => {
     // Vue.$store.commit("showLoading")
     return config;
 });
 // post请求头
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 var getData;
 export default getData = {
     // 数据接口==============================================================================
@@ -243,6 +243,19 @@ export default getData = {
         })
 
     },
+    //postdaily  大家保险提交台账
+    postdail(postData) {
+        return axios.post("/djledger/postdaily", JSON.stringify(postData), { 
+            headers:  {
+
+                       'Content-Type':   'application/json'
+
+                   },
+
+        }).then(res => {
+            return Promise.resolve(res);
+        })
+    },
     //删除客户
     deleteCustomer(params) {
         return axios.get("/client/delectclient", params).then(res => {
@@ -291,11 +304,22 @@ export default getData = {
     },
     //大家保险用户 查询自己的保单信息记录 默认是查询当天的
     getguarant(params) {
-        console.log("这是" + params)
         return axios.get("/djledger/getguaranteemessage", params).then(res => {
             return Promise.resolve(res)
         })
-    }
+    },
+    //getagent  查询所有代理人
+    getagent(params) {
+        return axios.get("/djledger/getagent", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
+    //getdepartment  查询所有部门
+    getdepartment(params) {
+        return axios.get("/djledger/getdepartment", params).then(res => {
+            return Promise.resolve(res)
+        })
+    },
     //
     //   // 退出登录
     //   logout() {

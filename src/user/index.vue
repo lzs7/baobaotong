@@ -87,6 +87,7 @@
           <div>日结</div>
         </div>
       </router-link>
+
       <div>
         <!-- <div class="icon"><img src="../assets/haoyou.png" alt=""></div> -->
         <van-collapse v-model="activeNames">
@@ -309,7 +310,7 @@ export default {
   }
 };
 </script>
-<style scoped="scoped">
+<style scoped>
 * {
   margin: 0;
   padding: 0;
